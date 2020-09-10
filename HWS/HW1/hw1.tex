@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{upquote,textcomp}
+
+\setlength{\parindent}{0cm}
+
+\setlength{\parskip}{0.3cm plus4mm minus3mm}
+
+\oddsidemargin = 0.2in
+\textwidth = 6.5 in
+\textheight = 9.8 in
+\headsep = -1in
+
+\lstset{frame=tb,
+  language=,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  keepspaces=true,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{black},
+  keywordstyle=\color{black},
+  commentstyle=\color{black},
+  stringstyle=\color{black},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{Database Systems, CSCI 4380-01 \\
+Homework \# 1 \\
+Due Monday September 14, 2020 at 11:59:59 PM}
+\date{}
+\begin{document}
+\maketitle
+
+\vspace*{-0.7in}
+
+\noindent{\bf Homework Statement.} This homework is worth 5\% of your
+total grade. If you choose to skip it, Midterm \#1 will be worth 5\%
+more. Remember, practice is extremely important to do well in this
+class. I recommend that not only you solve this homework, but also
+work on homeworks from past semesters. Link to those is already
+provided in Teams, which I am repeating here:
+
+\url{http://cs.rpi.edu/~sibel/DBS_Past_Materials/}
+
+This homework aims to test relational algebra first and foremost, and
+a bit of normalization theory.
+
+Please do the parts in sequence. The questions get
+harder and build on your knowledge of relational algebra from previous
+parts. Each question is equal weight.
+
+{\bf Database Description.} Now that we have confused you all with so
+many sites for so many different purposes, I assume you would like to
+construct a website to help manage your remote learning
+lifestyle. Here is a starter database idea:
+
+\noindent {\tt Sites(\underline{sitename, username}, password, bestbrowser)}\\
+\noindent {\tt Classes(\underline{classcode}, classname, semester, year, credits)}\\
+\noindent {\tt Classmeetings(\underline{classcode, dayofweek, starttime}, duration, sitename, url, note)}\\
+\noindent {\tt Exams(\underline{classcode, examname}, examdate,
+  starttime, sitename, url, note)}\\
+\noindent {\tt Teaches(\underline{classcode, instructorname}, email, note)}\\
+\noindent {\tt Officehours(\underline{classcode, dayofweek, starttime}, duration, sitename, username)}\\
+\noindent {\tt Resources(\underline{rid}, classcode, resourcetype, sitename, username, url)}\\
+
+where {\tt resourcetype} is one of \verb+'discussions','groups','hw','exercises','coursenotes','videos'+.
+
+Keys for each relation are underlined.
+
+{\tt Sites} are sites you have account on such as Submitty, Piazza,
+Gradescope, Webex Teams, etc. You must store your username. You can
+also store your password in an encoded format!
+
+{\tt Classes} are classes you are currently taking or have taken in the past. 
+
+{\tt ClassMeetings} are the specific meetings for that class,
+including lectures and study group meetings for each. For each day and
+start time, you store the duration of the meeting, the site that you
+use for the meeting, direct url and additional notes.
+
+{\tt Exams} stores for each class, the date, start time, site name,
+direct url and any additional notes. Examname are values like {\tt
+  exam1, exam2, final}.
+
+{\tt Teaches} stores all instructors for a course and the email that
+they use for that course. We also added a note so that you can note
+all weird habits and requests of each instructor.
+
+{\tt OfficeHours} for each class are stored for each day of the week
+(\verb+'Monday','Tuesday',..+), start time, duration, site and
+username to go for them.
+
+{\tt Resources} is the most useful relation in the database. It stores
+where you go for each different part of a class (hw, exercise,
+discussions). You store which site to go to, which username for that
+site to use and the direct URL for it.
+
+Note: All date fields are formatted as \verb+mon-day-year+,
+e.g. \verb+01-31-2020+. You can assume that you can check if a date
+value {\tt X} comes after another value {\tt Y} by checking whether
+{\tt X $>$ Y}. Direct URLs link to the specific URL for a specific
+site. For example, Submitty is a site but the direct URL for this
+course on Submitty is different than the direct URL for another
+course.
+
+  \newpage
+
+{\bf Question 1.}
+Write the following queries using relational algebra. You may use any
+valid relational algebra expression, break into multiple steps as
+needed. However, please make sure that your answers are well-formatted
+and are easily readable. Also, pay attention to the attributes
+required in the output!
+
+
+\begin{enumerate}  [(a)]
+\item Return {\tt classname}, {\tt examname} and {\tt examdate} of
+  all exams with {\tt examdate} after November 1st of 2020 that the
+  instructor named {\tt Fogg} is giving.
+
+\item Return {\tt classcode, dayofweek and startime} of class meetings
+  that conflict with an office hour for the same class (i.e. start at
+  the same time on the same day).
+  
+\item Return {\tt classcode, classname} of all classes that meet on
+  mondays ({\tt dayofweek}).
+  
+\item Return the username and best browser for all sites to be used
+  for {\tt hw} in a class taught in {\tt Fall 2000} ({\tt
+    classes.semester}, {\tt classes.year}).  
+
+\item Find the {\tt sitename} of all sites used in all classes for
+  class meetings, exams, office hours or other resources.
+
+\item Find the name of a pair of courses that have no sites in common
+  for any activity, i.e. class meetings, exams, office hours or other
+  resources.
+
+\item Find the code and name of courses with a single instructor in
+  the database.
+
+\item Return the course code of all courses in {\tt Fall 2000} ({\tt
+  classes.semester}, {\tt classes.year}) with office hours that are
+  not on {\tt Monday, Wednesday}. Return also the start time and duration
+  for each office hour.
+\end{enumerate}
+
+{\bf Question 2.} For the following relations, (a) find and list the
+keys, (b) check whether they satisfy BCNF, discuss why or why not, (c)
+check whether they satisfy 3NF, discuss why or why not.
+
+To show that a relation is not in BCNF or 3NF, you only need to show a
+violation. To show that they are in BCNF or 3NF, check each functional
+dependency and discuss why it is ok.
+
+\begin{enumerate}
+
+\item $R1(A,B,C,D,E,F)$, ${\cal F} = \{AC\rightarrow DE, BD\rightarrow F \}$
+
+\item $R2(A,B,C,D,E,F)$, ${\cal F} = \{ABC\rightarrow DEF,
+  AB\rightarrow A, BCD\rightarrow AEF \}$
+
+\item $R3(A,B,C,D,E,F)$, ${\cal F} = \{ABC\rightarrow DE, BC\rightarrow AF \}$
+
+\item $R4(A,B,C,D,E,F)$, ${\cal F} = \{ABC\rightarrow DEF, BD\rightarrow A \}$
+  
+\end{enumerate}
+
+
+{\bf SUBMISSION INSTRUCTIONS.} Submit a PDF document or a Text
+document for this homework using Submitty. No other format and no hand
+written homeworks please. No late submissions will be allowed.
+
+If the Submitty for homework submissions is not immediately available,
+we will announce it on Teams when it becomes available.
+
+{\bf Help with relational algebra formatting.} While in class I have
+been using a text version of relational algebra, which I have allowed
+for many years for students who do not want to figure out the Greek
+symbols. However, many past solutions use the more standard version
+with Greek symbols. You can use either one in your solutions, but do
+not mix and match. Use one consistently.
+
+I present you with the full syntax here in both ways (as well as the
+Latex symbols for it). Note that for the standard version, I simply
+use the Math mode in Latex.
+
+\begin{tabular}{l|l|l}
+  Operation & Text Version & Standard Version \\ \hline
+   Set Union & R union S & $R \,\cup\, S $ \\
+   Set Intersection & R intersect S & $R \,\cap\, S $ \\
+   Set Difference & R - S & $R \,-\, S $ \\
+   Rename &   T(A,B,C) = R & $\rho_{T(A,B,C)} (R)$ \\
+   Select & select\_\{C\} (R) & $\sigma_{C} (R)$ \\
+   Project & project\_\{A1,..,An\} (R) & $\pi_{A1,..,An} (R)$ \\
+   Cartesian product & R x S & $R \,\times\, S$ \\
+   Theta-Join & R join\_\{C\} S & $R \,\bowtie_{C}\, S$ \\
+   Natural Join & R * S & $R * S$ \\
+  \end{tabular}
+
+As an additional help, I format one of the queries we did in class in
+the standard format below for two equivalent solutions.
+
+Query: Find name of Marvel heroes who have starred in a movie
+
+Solution 1 (text format):
+
+T1(hid1, mid1) = HeroInMovie \\
+Result = project\_\{hero\} (select\_\{hid=hid1\} (MarvelHeroes x T1)) 
+
+Solution 1 (in standard format):
+\begin{eqnarray*}
+T1(hid1, mid1) & =  & HeroInMovie \\
+Result &  = & \pi_{hero} (\sigma_{hid=hid1}\,\, (MarvelHeroes \times T1)) 
+\end{eqnarray*}
+
+Solution 2 (text format):
+
+T1(hid1, mid1) = HeroInMovie \\
+Result = project\_\{hero\} (MarvelHeroes join\_\{hid=hid1\}  T1))
+
+Solution 2 (in standard format):
+\begin{eqnarray*}
+T1(hid1, mid1) & = & HeroInMovie \\
+Result = \pi_{hero} (MarvelHeroes \bowtie_{hid=hid1}  T1))
+\end{eqnarray*}
+
+\end{document}
+
