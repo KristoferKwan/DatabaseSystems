@@ -123,33 +123,64 @@ required in the output!
 \begin{enumerate}  [(a)]
 \item Return {\tt classname}, {\tt examname} and {\tt examdate} of
   all exams with {\tt examdate} after November 1st of 2020 that the
-  instructor named {\tt Fogg} is giving.
+  instructor named {\tt Fogg} is giving. \\\\
+ \texttt{T1 = Classes * Exams * Teaches} \\
+ \texttt{T2 = select\textunderscore{\string{examdate > 09-01-2020 and instructornname = `Fogg'}\string}} \\
+ \texttt{Result = project\textunderscore{\string{classname, examname, examdate}\string} T2}
 
 \item Return {\tt classcode, dayofweek and startime} of class meetings
   that conflict with an office hour for the same class (i.e. start at
-  the same time on the same day).
-  
+  the same time on the same day). \\\\
+ \texttt{T1(classcode1, dayofweek1, starttime1, duration1, sitename1, username1) = Officehours} \\
+ \texttt{T2 = T1 join\textunderscore{\string{classcode1=classcode and starttime1=starttime and dayofweek1=dayofweek}\string } Classmeetings} \\
+ \texttt{Result = project\textunderscore{\string{classcode, dayofweek, starttime}\string} T2}
+
 \item Return {\tt classcode, classname} of all classes that meet on
-  mondays ({\tt dayofweek}).
-  
+  mondays ({\tt dayofweek}). \\\\
+ \texttt{T1 = select\textunderscore{\string{dayofweek=`Monday'}\string} Classmeetings} \\
+ \texttt{Result = project\textunderscore{\string{classcode, classname}\string} Classmeetings * Classes}
+
 \item Return the username and best browser for all sites to be used
   for {\tt hw} in a class taught in {\tt Fall 2000} ({\tt
-    classes.semester}, {\tt classes.year}).  
+    classes.semester}, {\tt classes.year}). \\\\
+\texttt{T1 = Classes * Resources * Sites} \\
+\texttt{T2 = Select\textunderscore{\string{semester=`Fall' and year=2000}\string} T1} \\
+\texttt{Result = project\textunderscore{\string{username, bestbrowser}\string} T2}
 
 \item Find the {\tt sitename} of all sites used in all classes for
-  class meetings, exams, office hours or other resources.
+  class meetings, exams, office hours or other resources.\\\\
+\texttt{T1 = project\textunderscore{\string{sitename}\string} Classmeetings} \\
+\texttt{T2 = project\textunderscore{\string{sitename}\string} Exams} \\
+\texttt{T3 = project\textunderscore{\string{sitename}\string} Officehours} 
+\texttt{T4 = project\textunderscore{\string{sitename}\string} Resources} \\
+\texttt{Result = T1 $\cup$ T2 $\cup$ T3 $\cup$ T4}
+
 
 \item Find the name of a pair of courses that have no sites in common
   for any activity, i.e. class meetings, exams, office hours or other
-  resources.
-
+  resources. \\\\
+ \texttt{T1(classcode1, dayofweek1, starttime1, duration1, sitename1, username1) = Officehours} \\
+ \texttt{T2(classcode2, examname2, examdate2, starttime2, sitename2, url2, note2) = Exams} \\
+ \texttt{T3(classcode3, dayofweek3, starttime3, duration3, sitename3, url3, note3) = Classmeetings} \\
+ \texttt{T4 = T1 join\textunderscore{\string{classcode1=classcode2}\string } T2}  \\
+ \texttt{T5 = T4 join\textunderscore{\string{classcode2=classcode3}\string } T3}  \\
+ \texttt{T6 = project\textunderscore{\string{classcode1, sitename1, sitename2, sitename3}\string} T4} \\
+ \texttt{T7(classcode2, sitename4, sitename5, sitename6) = T6} \\ 
+ \texttt{Result = select\textunderscore{\string{classcode1<>classcode2 and sitename1<>sitename4 and sitename2<>sitename5 and sitename3<>sitename6}\string} T7}
+ 
 \item Find the code and name of courses with a single instructor in
-  the database.
+  the database. \\\\
+\texttt{T1(classcode1, instructorname1, email1, note1) = Teaches} \\
+\texttt{T2 = Teaches join\textunderscore{\string{classcode=classcode1 and instructorname<>instructorname1}\string } T1} \\
+\texttt{Result = project\textunderscore{\string{classcode, classname}\string} T2 * Classes } \\
 
 \item Return the course code of all courses in {\tt Fall 2000} ({\tt
   classes.semester}, {\tt classes.year}) with office hours that are
   not on {\tt Monday, Wednesday}. Return also the start time and duration
-  for each office hour.
+  for each office hour. \\\\
+\texttt{T1 = Classes * Officehours} \\
+\texttt{T2 = select\textunderscore{\string{semester=`Fall' and year=2000 and dayofweek<>`Monday' \\ and dayofweek<>`Wednesday' }\string} T1}
+\texttt{Result = project\textunderscore{\string{classcode, starttime, duration}\string} T2} \\
 \end{enumerate}
 
 {\bf Question 2.} For the following relations, (a) find and list the
