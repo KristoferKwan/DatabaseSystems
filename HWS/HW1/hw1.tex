@@ -168,7 +168,7 @@ required in the output!
  \texttt{T5 = T4 join\textunderscore{\string{classcode2=classcode3}\string } T3}  \\
  \texttt{T6 = project\textunderscore{\string{classcode1, sitename1, sitename2, sitename3}\string} T4} \\
  \texttt{T7(classcode2, sitename4, sitename5, sitename6) = T6} \\ 
- \texttt{Result = select\textunderscore{\string{classcode1<>classcode2 \\and sitename1<>sitename4 and sitename2<>sitename5 and sitename3<>sitename6}\string} T7}
+ \texttt{Result = select\textunderscore{\string{classcode1<>classcode2 \\and sitename1<>sitename4 and sitename1<>sitename5 and sitename1<>sitename6 and sitename2<>sitename4 and sitename2<>sitename5 and sitename2<>sitename6 \\ and sitename3<>sitename4 and sitename3<>sitename5 and sitename3<>sitename6}\string} T7}
  
 \item Find the code and name of courses with a single instructor in
   the database. \\\\

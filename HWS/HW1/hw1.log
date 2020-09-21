@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.2)  10 SEP 2020 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.2)  14 SEP 2020 23:44
 entering extended mode
 **c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex
 (c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex
@@ -50,76 +50,154 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+ (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen139
+\enit@toks=\toks18
+\enit@inbox=\box47
+\enit@count@id=\count183
+\enitdp@description=\count184
+) (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 ) (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count183
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count185
+\l__pdf_internal_box=\box48
 ) (c:/Users\krist\Documents\Fall2020\DatabaseSystems\HWS\HW1\hw1.aux)
 \openout1 = `hw1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-\c@lstlisting=\count184
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+\c@lstlisting=\count186
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 39.
+(Font)              <12> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 39.
+(Font)              <8> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 39.
+(Font)              <6> on input line 40.
 
 
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 50.
+(Font)              <10.95> on input line 51.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--72
+Underfull \hbox (badness 10000) in paragraph at lines 65--73
 
  []
 
 
-Overfull \hbox (31.47673pt too wide) in paragraph at lines 73--74
+Overfull \hbox (31.47673pt too wide) in paragraph at lines 74--75
 []\OT1/cmr/m/n/10.95 where \OT1/cmtt/m/n/10.95 resourcetype \OT1/cmr/m/n/10.95 is one of [][]\OT1/cmtt/m/n/10.95 discussions,groups,hw,exercises,coursenotes,videos[]\OT1/cmr/m/n/10.95 . 
  []
 
 [1
 
 {C:/Users/krist/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 201.
+Underfull \hbox (badness 10000) in paragraph at lines 125--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--172
+
+ []
+
+
+Overfull \hbox (17.51509pt too wide) in paragraph at lines 161--172
+\OT1/cmtt/m/n/10.95 T2(classcode2, examname2, examdate2, starttime2, sitename2, url2, note2) = Exams 
+ []
+
+
+Overfull \hbox (6.01772pt too wide) in paragraph at lines 161--172
+\OT1/cmtt/m/n/10.95 and sitename1<>sitename4 and sitename1<>sitename5 and sitename1<>sitename6 and
+ []
+
+
+Overfull \hbox (6.01772pt too wide) in paragraph at lines 161--172
+\OT1/cmtt/m/n/10.95 and sitename3<>sitename4 and sitename3<>sitename5 and sitename3<>sitename6} T7 
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 173--179
+
+ []
+
+
+Overfull \hbox (10.15677pt too wide) in paragraph at lines 173--179
+\OT1/cmtt/m/n/10.95 T2 = Teaches join[]{classcode=classcode1 and instructorname<>instructorname1} T1 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--187
+
+ []
+
+[3]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 267.
  (C:\Users\krist\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 201.
- [2] [3] (c:/Users\krist\Documents\Fall2020\DatabaseSystems\HWS\HW1\hw1.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 267.
+ [4] [5] (c:/Users\krist\Documents\Fall2020\DatabaseSystems\HWS\HW1\hw1.aux) ) 
 Here is how much of TeX's memory you used:
- 1909 strings out of 480790
- 29097 string characters out of 2897302
- 268377 words of memory out of 3000000
- 17957 multiletter control sequences out of 15000+200000
+ 2229 strings out of 480790
+ 34509 string characters out of 2897302
+ 275932 words of memory out of 3000000
+ 18273 multiletter control sequences out of 15000+200000
  536765 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,8n,36p,237b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,8n,36p,400b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users\krist\Documents\Fall2020\DatabaseSystems\HWS\HW1\hw1.pdf (3 pages, 125495 bytes).
+Output written on c:/Users\krist\Documents\Fall2020\DatabaseSystems\HWS\HW1\hw1.pdf (5 pages, 132246 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

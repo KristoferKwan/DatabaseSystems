@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599712980 "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex" "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.pdf" "hw1" 1599712981
+["pdflatex"] 1600141485 "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex" "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.pdf" "hw1" 1600141486
   "C:/Users/krist/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1599052773 10020123 fd91c7c8b3ee78a0bb6a60736bf7b8bc ""
   "C:/Users/krist/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1599712979 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -28,6 +28,7 @@
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/base/omscmr.fd" 1582875266 2470 59e43b502a8bea3a12f4954945302e40 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo" 1582875266 8462 61fdf79debfc3dc4dab35ec6cf83fbf7 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1582875266 2821 2c0928feafd5527387e29a1af774d030 ""
+  "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty" 1561039820 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1580750142 2677 e3b24ff953e5b58d924f163d25380312 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdfmode.def" 1593424850 24606 ecae4e851ce9ce4554d156050e5057f9 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg" 1585220135 1879 e31effa752c61538383451ae21332364 ""
@@ -36,13 +37,13 @@
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty" 1580648486 3469 19b6cb25f21abe53fb90b9fe27615441 ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/upquote/upquote.sty" 1335534756 1088 517e01cde97c1c0baf72e69d43aa5a2e ""
   "C:/Users/krist/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.aux" 1599712981 8 a94a2480d3289e625eea47cd1b285758 ""
-  "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex" 1599699342 8807 26d3795bcf7bb5b1c6566e1de26e5578 ""
-  "hw1.aux" 1599712981 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "hw1.tex" 1599699342 8807 26d3795bcf7bb5b1c6566e1de26e5578 ""
+  "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.aux" 1600141486 8 a94a2480d3289e625eea47cd1b285758 ""
+  "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.tex" 1600141484 13643 341260e6c71bb2b7d3a42e233f4bff3a ""
+  "hw1.aux" 1600141486 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "hw1.tex" 1600141484 13643 341260e6c71bb2b7d3a42e233f4bff3a ""
   (generated)
   "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.log"
-  "hw1.pdf"
   "hw1.log"
-  "hw1.aux"
   "c:/Users/krist/Documents/Fall2020/DatabaseSystems/HWS/HW1/hw1.pdf"
+  "hw1.aux"
+  "hw1.pdf"
